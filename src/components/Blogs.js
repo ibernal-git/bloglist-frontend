@@ -72,7 +72,7 @@ const Blogs = ({ username, setMessage, handleNotification }) => {
           (
             <div key={blog.id} style={blogStyle}>
               <Blog blog={blog} updateBlog={updateBlog} removeBlog={removeBlog} />
-              {username === blog.user.username ? <div style={removeButton}><button onClick={() => removeBlog(blog)}>Remove</button></div> : null}
+              {username === blog.user.username ? <div style={removeButton}><button className='remove-button' onClick={() => removeBlog(blog)}>Remove</button></div> : null}
             </div>
           )
         )}

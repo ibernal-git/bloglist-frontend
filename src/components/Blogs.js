@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import PropTypes from 'prop-types'
 import Blog from './Blog'
 import BlogForm from './BlogForm'
 import blogService from '../services/blogs'
@@ -78,6 +79,11 @@ const Blogs = ({ username, setMessage, handleNotification }) => {
       </div>
     </>
   )
+}
+Blogs.propTypes = {
+  username: PropTypes.string.isRequired,
+  setMessage: PropTypes.func.isRequired,
+  handleNotification: PropTypes.func.isRequired
 }
 
 export default Blogs

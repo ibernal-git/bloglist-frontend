@@ -67,7 +67,7 @@ const Blogs = ({ username, setMessage, handleNotification }) => {
           addBlog={addBlog}
         />
       </Togglable>
-      <div>
+      <div id='blogs'>
         {blogs.map(blog =>
           (
             <div key={blog.id} style={blogStyle}>
